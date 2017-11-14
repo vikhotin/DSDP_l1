@@ -7,7 +7,7 @@ env:
   - DJANGO=1.11.2
   
 install:
-  - pip install -q django==$DJANGO --use-mirrors
+  - pip install -q django==$DJANGO
   
 script:
   - python manage.py test
