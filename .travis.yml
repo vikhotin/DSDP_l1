@@ -10,4 +10,4 @@ install:
   - pip install -q django==$DJANGO
   
 script:
-  - python manage.py test
+  - python hellosite/manage.py test
