@@ -1,1 +1,1 @@
-web: gunicorn hello:app --log-file -
+web: python hellosite/manage.py runserver 0.0.0.0:$PORT
