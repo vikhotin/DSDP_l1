@@ -1,21 +1,23 @@
 language: python
-
 python:
-  - "3.5"
-  
+- '3.5'
+
 env:
-  - DJANGO=1.11.2
-  
+- DJANGO=1.11.2
+
 install:
-  - pip install -q django==$DJANGO
-  
+- pip install -q django==$DJANGO
+
 script:
-  - python hellosite/manage.py test
-  
+- python hellosite/manage.py test
+
 deploy:
   provider: heroku
   api_key:
-    secure: "LclawE2C/5YKgUYXUdSzURrgEMuD3p/5f60V+FLMu/rJW4JMv8rTMYnutFJ6TixxqIVfhjKszOy2ooMdGGNyzKnV5CWuv4vkBnKdebYCkn4CoiOAioe9LhTOPoN6h9kgrmHswN5BawrXS1EQl4gU/Ztmy47n9UThg/Snps+Cd5l94WBt2XMtazg6rOXpMF4bfSBu4vgJGesBd/6aSADfnm/l4mQVESvlnSFfLs0STjn5naku0VgXlZF6DTsJHqVEYF+iOnT99M6L9dWTPasmHxUagRCR5SR/y56rwgV9RtJY7uoUr9hfCxHpXh0NTfhoNVQHepqMENJCnG+KMi30vYNO+LjRXwyF6YnqKYfru9wh9a8c8IPnZERMY7ePy+S9kpF994ZWyjXU/D1GOEoBwniAlAnY7YiK9Q6ICVYqrf6tjx/EilN6uPiBMH4Kdmb+P7oZwiOO4SVtP/b80BS8MiKGWNRrODzLCHqXxXXMxJn/7niawlpk1he1zEwTbp4zG85MBwAPnMu+tD0KXBeThQDc3EvayAlrfEHk/bUpVkUv4G/KALn4trR+1B22h8Lmw+2TjhvGXDj2dxEM4tKhqZPqUvHcqjj2YLFZrRiYmj9HfH2VoNspMMKK3KjvEjozrmpwSw5LElzzEK92YoyqieH/5yFSnCdAZA8q6C1V/FI="
-  
+    secure: u/6ct5y0ozgDrA8v3Qh3ogr6z89hI+FrlQ2w9cueQnMOWNO6xTqzriwTywtjQNIdhfW4mRWS9QSllolD00QPyogAIwwC4RGZbmwC0N8kpkfvS4SvXzoxf6kwGUe/QscSQPFayouRJRYJpLR0qerIHW8+ElgPMdOvNYjLDDcV9bTgohiFQBGic865O/fh2DDbkH4gNQhnAaJHhgGKz+bmDbxTCPnTOhQqiuDiNhgJjxcsotVLYof0YLWKzPt7W0IHBA6icNdGO3BiaiU+ldDTM2F1AJsdqOkqvzV7K2d5fWIYbCtxFGT5WEIINP7BQrNMN4HYlohYHQFsE2KyRTpU8qBRXE1aXYxpk8BXDNbljZMT3Mte6ghKuewP5MkQfU2fXStIR2mIvA36t8FVw/GnTDE1/A5EfUos73uIi1KvKbK7BmI5ne8K174Fh0tLlQ6aEN3N47poGgiFcl3kjx8cvUdQp6gh/D1iM1uENtNjBPdnkh6ZZRGL2knysrH1TJCRF4Xpq5PA2oi8ydu9xH4K2qkgmZ+J+2C7dPKQg7rvI3l13biHbDosmBTAnVE4k18f6/gHuhDw4VUvPUg7UKibAyYS8PZ5Lv7etWiefev55YqB9PsqUOHbV7pNwYxEO7MJnNXPeg3jmhGebjagDSov3m7QlxT7wVtmiFtiCGWnXJ4=
+  app: DSDP_l1
+  on:
+    repo: vikhotin/DSDP_l1
+    
 notifications:
   email: false
