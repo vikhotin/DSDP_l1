@@ -1,10 +1,13 @@
 language: python
 
 python:
-  - 2.5
+  - "2.5"
   
 env:
   - DJANGO=1.11.2
+  
+install:
+  - pip install -q django==$DJANGO --use-mirrors
   
 script:
   - python manage.py test
