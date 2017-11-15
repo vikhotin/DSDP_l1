@@ -9,7 +9,9 @@ install:
 - pip install -q django==$DJANGO
 
 script:
-- python hellosite/manage.py test
+- cd hellosite
+- python manage.py test
+- cd ..
 
 deploy:
   provider: heroku
